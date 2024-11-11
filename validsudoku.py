@@ -15,12 +15,18 @@ rows = defaultdict(set)
 squares = defaultdict(set) # key = (r/3 , c/3)
 
 
-# for i in range(len(board)):
-#     for k in range(len(board)):
-#         if board[i][k] not in x and board[i][k] != ".":
-#             x[k]=board[i][k]
-#     rows[i] = x[k]
+for r in range(9):
+    for c in range(9):
+        if board[r][c] == ".":
+            continue
+        if (board[r][c] in rows[r] or board[r][c] in cols[c] or board[r][c] in squares[(r // 3 , c // 3)]):
+            print("false")
+        cols[c].add(board[r][c])
+        rows[r].add(board[r][c])
+        squares[(r // 3 , c // 3)].add(board[r][c])
+print("True")            
+            
 
-
+ 
  
  

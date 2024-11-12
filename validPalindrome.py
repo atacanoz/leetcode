@@ -7,23 +7,17 @@
 
 s = "A man, a plan, a canal: Panama"
 print(s)
-s_alnum = ""
-s_check = ""
-stack = []
+
+newstr = ""
 
 for c in s:
     if c.isalnum():
-        s_alnum += c.lower()
-        stack.append(c.lower())
+        newstr += c.lower()
 
-while stack:
-    s_check += stack.pop()
+print(newstr)        
 
-
-if s_check == s_alnum:
-    print("TRUE")
-else: 
-    print("FALSE")    
-
-
+if newstr == newstr[::-1]: #checking with reverse of the newstr 
+    print("true")  
+else:
+    print("false")    
          

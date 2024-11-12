@@ -7,23 +7,23 @@
 
 s = "A man, a plan, a canal: Panama"
 print(s)
-s_alpha = ""
+s_alnum = ""
 s_check = ""
 stack = []
 
 for c in s:
-    if c.isalpha():
-        s_alpha += c.lower()
+    if c.isalnum():
+        s_alnum += c.lower()
         stack.append(c.lower())
 
 while stack:
     s_check += stack.pop()
 
 
-if s_check == s_alpha:
+if s_check == s_alnum:
     print("TRUE")
-
-print("FALSE")    
+else: 
+    print("FALSE")    
 
 
          

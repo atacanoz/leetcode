@@ -12,9 +12,9 @@
 
 numbers = [2, 7, 11, 15]
 target = 9
-res = list()
-j = len(numbers)-1
-i=0
+
+j = len(numbers)-1 
+i = 0
 
 while numbers[i] + numbers[j] != target:
 

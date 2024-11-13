@@ -13,24 +13,17 @@
 # The distinct triplets are [-1,0,1] and [-1,-1,2].
 # Notice that the order of the output and the order of the triplets does not matter.
 
-import collections
+nums = [-1, 0, 1, 2, -1, -4]
 
-nums = [-1,0,1,2,-1,-4]
-
-x = collections.defaultdict()
-
-target = int
-
+x = set()
 
 for i in range(len(nums)):
-    j = i + 1
-    while len(nums) > j:
-        if -nums[i]-nums[j] in nums:
-            if nums.index(-nums[i]-nums[j]) != i and nums.index(-nums[i]-nums[j]) != j:
-                y = [nums[i], nums[j], -nums[i]-nums[j]]
-                x[(nums[i], nums[j], -nums[i]-nums[j])]
-           
-        j+=1    
-      
+    for j in range(i + 1, len(nums)):
+
+        required = -nums[i] - nums[j]
+        
+        if required in nums and nums.index(required) != i and nums.index(required) != j:
+            triplet = tuple(sorted([nums[i], nums[j], required]))
+            x.add(triplet)
 
 print(x)

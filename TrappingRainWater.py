@@ -4,10 +4,8 @@
 
 height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
 
-area = 0
-i , j = 0 , len(height) - 1 
+area , i , j = 0 , 0 , len(height) - 1 
 
-print(height)
 
 while i<j and height[i] <= height[i+1]:
     i+=1    
@@ -16,8 +14,6 @@ while i<j and height[j] <= height[j-1]:
     j-=1
 
 while i < j:
-    print(f"Alan: {area} , height[{i}]: {height[i]} , height[{j}]: {height[j]}  ")    
-
     if height[j] > height[i]:
         if height[i] > height[i+1]:
             area += height[i] - height[i+1]

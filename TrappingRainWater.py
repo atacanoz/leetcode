@@ -4,15 +4,15 @@
 
 height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
 
-tmp , area = 0 , 0
+area = 0
 i , j = 0 , len(height) - 1 
 
 print(height)
 
-while height[i] <= height[i+1]:
+while i<j and height[i] <= height[i+1]:
     i+=1    
 
-while height[j] <= height[j-1]:
+while i<j and height[j] <= height[j-1]:
     j-=1
 
 while i < j:

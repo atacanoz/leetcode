@@ -14,13 +14,14 @@ height = [1,8,6,2,5,4,8,3,7]
 area, A  = 0 , 0
 
 for i in range(len(height)):
-    if A > area:
-        area = A    
-    for j in range(i+1,len(height)):
+    for j in range(i+1,len(height)): 
         if height[i] > height[j]:
             A = height[j] * (j - i)
         else:
             A = height[i] * (j - i)
-        print (i, j, A, area)        
+
+        if A > area:
+            area = A          
+        print(i,j,A,area)
 print(area)        
 

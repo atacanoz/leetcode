@@ -11,17 +11,23 @@
 # In this case, the max area of water (blue section) the container can contain is 49.
 
 height = [1,8,6,2,5,4,8,3,7]
-area, A  = 0 , 0
 
-for i in range(len(height)):
-    for j in range(i+1,len(height)): 
-        if height[i] > height[j]:
-            A = height[j] * (j - i)
-        else:
-            A = height[i] * (j - i)
+max_area = 0
+i = 0
+j = len(height)-1
 
-        if A > area:
-            area = A          
-        print(i,j,A,area)
-print(area)        
+while i < j:
 
+    if height[j] > height[i]:
+        area = height[i] * (j - i)
+        i+=1
+
+    else:
+        area = height[j] * (j - i)
+        j-=1
+    if area > max_area:
+        max_area = area
+    
+print(max_area)
+
+   

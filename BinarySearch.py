@@ -10,18 +10,23 @@
 nums = [-1, 0, 3, 5, 8, 9, 12] 
 target = 9
 s = len(nums)
-# for i in range(len(nums)//2):
-#     print(i)
 
 i = s//2
 
-print(i)
+while nums[i] != target:
+    if nums[i] < target:
+        i = (s + i)//2
+ 
+    else:
+        i = (s - i) //2
+
 
 if target not in nums:
-    print("-1")
+    i = -1
 
-while nums[i] != target:
-    
+print(i)        
+            
+
     
 
 

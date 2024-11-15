@@ -6,33 +6,23 @@
 # Output: 4
 # Explanation: 9 exists in nums and its index is 4
 
-#        0  1  2  3  4  5  6
-nums = [-1, 0, 5] 
-target = 9
-s = len(nums)
 
-i = s//2
+nums = [0,1,2,3,4,5,6,7,8,9,10,11,12]
+target = 6
 
-for j in range(s//2):
-    if nums[i] < target:
-        i = (s + i)//2
- 
+left , right = 0, len(nums)-1
+mid = (left + right) // 2
+
+while nums[mid] != target:
+    if nums[mid] > target:
+        right = mid
+        mid = mid // 2
     else:
-        i = (s - i) //2
-
-
-if target not in nums:
-    i = -1
-
-print(i)        
-            
-
+        left = mid 
+        mid = (mid + right)//2    
+    print(left, mid,right)
     
 
 
-# x += (len(nums)-x) // 2
 
-# print(x)
-
-# x += (len(nums)-x) // 2
-
+print(mid)

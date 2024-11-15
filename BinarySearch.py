@@ -7,13 +7,13 @@
 # Explanation: 9 exists in nums and its index is 4
 
 #        0  1  2  3  4  5  6
-nums = [-1, 0, 3, 5, 8, 9, 12] 
+nums = [-1, 0, 5] 
 target = 9
 s = len(nums)
 
 i = s//2
 
-while nums[i] != target:
+for j in range(s//2):
     if nums[i] < target:
         i = (s + i)//2
  

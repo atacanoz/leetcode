@@ -35,7 +35,7 @@ for i in range(len(tokens)):
         stack.append(temp)
     elif tokens[i] == "-":
         temp = stack.pop()
-        temp = temp - stack.pop()
+        temp = stack.pop() - temp 
         stack.append(temp)     
     elif tokens[i] == "*":
         temp = stack.pop()

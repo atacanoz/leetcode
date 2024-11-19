@@ -25,33 +25,23 @@ tokens = ["10","6","9","3","+","-11","*","/","*","17","+","5","+"]
 
 stack = []
 
-for i in range(len(tokens)):
-    match = re.search(r'\b-?\d+\b', tokens[i])
-    if bool(match):
-        stack.append(int(tokens[i]))
-    elif tokens[i] == "+":
-        temp = stack.pop()
-        temp = temp + stack.pop()
-        stack.append(temp)
-    elif tokens[i] == "-":
-        temp = stack.pop()
-        temp = stack.pop() - temp 
-        stack.append(temp)     
-    elif tokens[i] == "*":
-        temp = stack.pop()
-        temp = temp * stack.pop()
-        stack.append(temp)
+for i in tokens:
+    
+    if i == "+":
+        stack.append(stack.pop() + stack.pop())
+    
+    elif i =="-":
+        second, first = stack.pop(), stack.pop()
+        stack.append(first - second)
+    
+    elif i == "*":
+        stack.append(stack.pop() * stack.pop())
+    
+    elif i == "/":
+        second, first = stack.pop(), stack.pop()
+        stack.append(int(first / second))
 
-    elif tokens[i] == "/":
-        temp = stack.pop() 
-        temp = stack.pop() / temp
-        stack.append(int(temp))
-    print(stack)
+    else: 
+        stack.append(int(i))
 
-
-
-# x= 6 / -132
-
-# print(x)
-
-# print(int(x))
+print(stack[0])        

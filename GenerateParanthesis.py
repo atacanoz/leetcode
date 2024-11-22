@@ -36,6 +36,14 @@ def generateParenthesis(n: int):
     return res
 
    
-n = 5
+for i in range(10):
+    combinations = generateParenthesis(i)
+    print(len(combinations))
 
-print(generateParenthesis(n))
+# outputs are catalan numbers from n = 0 to 10
+
+
+# combinations = generateParenthesis(n)
+# count =  len(combinations)
+# print(combinations)
+# print(count)

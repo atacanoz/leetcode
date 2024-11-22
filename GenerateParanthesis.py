@@ -9,25 +9,33 @@
 # Input: n = 1
 # Output: ["()"]
 
+
+# only add open paranthesis if open < n
+# only add a closing paranthesis if open > closed 
+# valid until open == closed == n
+
+
 def generateParenthesis(n: int):
-   
-    def dfs(left, right, s):
-        if len(s) == n * 2:
-            res.append(s)
-            return
-        
-        if left < n:
-            dfs(left + 1, right, s + "(")
-
-        if right < left:
-            dfs(left, right + 1, s + ")")    
-
-
+    stack = []
     res = []
-    dfs(0, 0, ""),
 
+    def backtrack(open, closed):
+        if open == closed == n:
+            res.append("".join(stack))
+            return 
+        if open < n:
+            stack.append("(")
+            backtrack(open + 1, closed)
+            stack.pop()
+        if open > closed:
+            stack.append(")")
+            backtrack(open, closed + 1)
+            stack.pop()
+
+    backtrack(0,0)
     return res
 
+   
+n = 5
 
-n = 4
 print(generateParenthesis(n))

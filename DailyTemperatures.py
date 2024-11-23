@@ -5,14 +5,22 @@
 # Input: temperatures = [73,74,75,71,69,72,76,73]
 # Output: [1,1,4,2,1,1,0,0]
 
-temperatues = [73, 74, 75, 71, 69, 72, 76, 73]
+temperatures = [73, 74, 75, 71, 69, 72, 76, 73]
 
 answer = []
-count = 0
-for i in range(len(temperatues)):
-    for k in range(i + 1, len(temperatues)):
-        if temperatues[k]>temperatues[i]:
-            print(f"{temperatues[i]} , {temperatues[k]} , {k-i}" ,end = " ")
+
+for i in range(len(temperatures)):
+    count = 0
+    for k in range(i + 1, len(temperatures)):    
+        count += 1        
+        if temperatures[k] > temperatures[i]:
             break
-        print("h")
-    print("")
+    else: 
+        count = 0           
+        
+        
+    # print(f"{temperatures[i]} , {temperatures[k]} , {i}, {k}" ,end = " ")    
+    # print("")
+    answer.append(count)
+
+print(answer)

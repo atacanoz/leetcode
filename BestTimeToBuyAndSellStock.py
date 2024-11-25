@@ -9,11 +9,14 @@
 # Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
 # Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 
-prices = [7,6,5,4,3,2,1]
+prices = [7,5,3]
 
 def maxProfit(arr):
     i=0
-    while i + 1 < len(arr)  and arr[i] > arr[i+1]:
+    while arr[i] >= arr[i+1]:
         i+=1
-    print(arr[i])    
-maxProfit(prices)
+        if i + 1 == len(arr):
+            return 0
+    
+    
+    

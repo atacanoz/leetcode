@@ -1,18 +1,19 @@
-class Solution:
-    def search(self, nums: List[int], target: int) -> int:
+def BinarySearch(arr, target):
 
-        left, right = 0, len(nums) - 1 
+    left = 0
+    right = len(arr) - 1
 
-        while   left <= right:
-            mid = left + (right - left) // 2
+    while left <= right:
 
-            if nums[mid]==target:
-                return mid
+        mid = (left + right) // 2
 
-            elif nums[mid] < target:
-                left = mid + 1
+        if arr[mid] == target:
+            return mid
+        
+        elif arr[mid] > target:
+            right = mid - 1
 
-            else:
-                right = mid - 1    
-
-        return -1
+        else:  # arr[mid] < target
+            left = mid + 1
+    
+    return -1   

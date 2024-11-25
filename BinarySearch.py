@@ -8,21 +8,28 @@
 
 
 nums = [0,1,2,3,4,5,6,7,8,9,10,11,12]
-target = 6
+target = 13
 
-left , right = 0, len(nums)-1
-mid = (left + right) // 2
+def BinarySearch(arr, x):
 
-while nums[mid] != target:
-    if nums[mid] > target:
-        right = mid
-        mid = mid // 2
-    else:
-        left = mid 
-        mid = (mid + right)//2    
-    print(left, mid,right)
-    
+    low = 0
+    high = len(arr) - 1
 
+    while low <= high:
+        
+        mid = low + (high - low) // 2
 
+        if arr[mid] == x:
+            return mid
+        
+        elif arr[mid] < x:
+            low = mid + 1
 
-print(mid)
+        else:
+            high = mid - 1
+
+    return -1            
+
+res = BinarySearch(nums, target)
+
+print(res)

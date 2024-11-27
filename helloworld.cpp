@@ -1,12 +1,26 @@
-#include <iostream> 
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+        int left = 0;
+        int right = nums.size() - 1;  
 
-using namespace std;
+        while (left <= right){
+            int mid = (left + right) / 2;
 
-int main(){
+            if (nums[mid]==target){
+                return mid;
+            }
 
-cout << "hello world" << endl;
+            else if(nums[mid] > target){
+                right = mid - 1;
+            }
 
+            else{
+                left = mid + 1;
+            }   
+        }
 
-return 0;
-
-}
+        return -1;
+        
+    }
+};

@@ -32,7 +32,13 @@ class LinkedList:
         while temp:
             print(temp.data, end = " ")
             temp = temp.next
-        print()    
+        print()
+
+    def deleteFromBeginning(self):
+        if self.head is None:
+            return "The list is empty"
+        self.head = self.head.next
+
 
 list = LinkedList()
 

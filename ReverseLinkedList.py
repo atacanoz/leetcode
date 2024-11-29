@@ -39,13 +39,28 @@ class LinkedList:
             return "The list is empty"
         self.head = self.head.next
 
+    def ReverseList(self):
+        node = None
+
+        while self.head:
+               temp = self.head.next
+               self.head.next = node
+               node = self.head
+               self.head = temp
+        return self.head
+
+
+
 
 list = LinkedList()
-
 list.insertAtBeginning(5)
 list.insertAtBeginning(4)
 list.insertAtBeginning(3)
 list.insertAtBeginning(2)
 list.insertAtBeginning(1)
+
+list.printList()
+
+list.ReverseList()
 
 list.printList()

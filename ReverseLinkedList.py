@@ -40,15 +40,17 @@ class LinkedList:
         self.head = self.head.next
 
     def ReverseList(self):
-        node = None
-
-        while self.head:
-               temp = self.head.next
-               self.head.next = node
-               node = self.head
-               self.head = temp
+        prev = None
+        current = self.head
+        
+        while current:
+            next_node = current.next
+            current.next = prev
+            prev = current
+            current = next_node
+        
+        self.head = prev
         return self.head
-
 
 
 
@@ -59,8 +61,10 @@ list.insertAtBeginning(3)
 list.insertAtBeginning(2)
 list.insertAtBeginning(1)
 
+print("Original List")
 list.printList()
 
 list.ReverseList()
 
+print("Reversed List")
 list.printList()

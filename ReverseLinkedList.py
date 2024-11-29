@@ -5,7 +5,7 @@
 
 class Node:
     def __init__(self, data):
-        self.val = data
+        self.data = data
         self.next = None
     
 class LinkedList:
@@ -33,3 +33,13 @@ class LinkedList:
             print(temp.data, end = " ")
             temp = temp.next
         print()    
+
+list = LinkedList()
+
+list.insertAtBeginning(5)
+list.insertAtBeginning(4)
+list.insertAtBeginning(3)
+list.insertAtBeginning(2)
+list.insertAtBeginning(1)
+
+list.printList()

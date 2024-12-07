@@ -7,6 +7,6 @@ class TreeNode:
         self.left = left 
         self.right = right 
     
-class Solution: 
-    def InvertBinaryTree(self, root: Opt[TreeNode]) -> Opt[TreeNode]:
-        pass
+    def InvertBinaryTree(self, root):
+        while self.left is not None:
+            

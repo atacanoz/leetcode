@@ -6,7 +6,7 @@ def BinarySearch(arr, target):
 
     while left <= right:
         mid = (left + right)//2
-#amojg
+#am
         if arr[mid]==target:
             return mid
         elif arr[mid]>target:

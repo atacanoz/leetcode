@@ -14,7 +14,7 @@
 # only add a closing paranthesis if open > closed 
 # valid until open == closed == n
 
-
+#hroahğfıa
 def generateParenthesis(n: int):
     stack = []
     res = []

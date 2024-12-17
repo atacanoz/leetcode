@@ -4,7 +4,7 @@
 
 # Input: n = 3
 # Output: ["((()))","(()())","(())()","()(())","()()()"]
-# Example 2:
+# Example 2: pldl
 
 # Input: n = 1
 # Output: ["()"]

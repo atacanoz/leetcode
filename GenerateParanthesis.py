@@ -7,7 +7,7 @@
 # Example 2: pldl
 
 # Input: n = 1
-# Output: ["()"]
+# Output: ["()"]fafa
 
 
 # only add open paranthesis if open < n

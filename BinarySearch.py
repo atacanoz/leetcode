@@ -4,7 +4,7 @@
 def BinarySearch(arr, target):
     left, right = 0, len(arr)-1
 
-    while left <= right:
+    while left <= right: 
         mid = (left + right)//2
 #ajnlkhbn
         if arr[mid]==target:

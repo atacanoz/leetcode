@@ -24,6 +24,6 @@ arr = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
 target = 38              
 
 print(BinarySearch(arr,target))
-
+   
 y = (3 + 4 ) // 2
 print(y)

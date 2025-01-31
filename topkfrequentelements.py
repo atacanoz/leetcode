@@ -21,7 +21,7 @@ while heap:
      print(f"number: {key}, frequency: {-value}")
 
 
-print(out)
+print(out)  
 
 
 

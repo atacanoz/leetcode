@@ -11,7 +11,7 @@ for i in nums:
     map[i] += 1   
 
 print(list(map.items()))
-for key, value  in map.items():
+for key, value  in map.items():   
     heapq.heappush(heap,(-value, key))
     print(heap)
 

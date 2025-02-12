@@ -54,7 +54,7 @@ class LinkedList:
 
 
 
-list = LinkedList()
+list = LinkedList()      
 list.insertAtBeginning(5)
 list.insertAtBeginning(4)
 list.insertAtBeginning(3)

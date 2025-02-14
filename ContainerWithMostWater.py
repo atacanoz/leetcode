@@ -10,7 +10,7 @@
 # Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. 
 # In this case, the max area of water (blue section) the container can contain is 49. 
 
-height = [1,8,6,2,5,4,8,3,7]
+height = [1,8,6,2,5,4,8,3,7]   
 
 max_area = 0
 i = 0

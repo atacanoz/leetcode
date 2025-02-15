@@ -10,7 +10,7 @@ for i in range(len(nums)):
     print(res)
 
 for k in range(len(nums)):
-    res[len(nums)-k-1] *= left
+    res[len(nums)-k-1] *= left    
     left *= nums[len(nums)-k-1]
     print(res)
     

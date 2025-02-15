@@ -13,7 +13,7 @@ for k in range(len(nums)):
     res[len(nums)-k-1] *= left    
     left *= nums[len(nums)-k-1]
     print(res)
-    
+       
     
 
   

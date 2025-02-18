@@ -14,7 +14,7 @@ for k in range(len(nums)):
     left *= nums[len(nums)-k-1]
     print(res)
           
-       
+           
 
   
 

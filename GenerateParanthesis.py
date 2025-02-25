@@ -35,7 +35,7 @@ def generateParenthesis(n: int):
     backtrack(0,0)
     return res
 
-       
+          
 for i in range(10):
     combinations = generateParenthesis(i)
     print(len(combinations))

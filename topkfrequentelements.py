@@ -15,7 +15,7 @@ for key, value  in map.items():
     heapq.heappush(heap,(-value, key))
     print(heap)
 
-while heap:
+while heap:   
      value, key = heapq.heappop(heap)
      out.append(key)
      print(f"number: {key}, frequency: {-value}")

@@ -14,7 +14,7 @@ print(list(map.items()))
 for key, value  in map.items():   
     heapq.heappush(heap,(-value, key))
     print(heap)
-
+        
 while heap:                           
      value, key = heapq.heappop(heap)
      out.append(key)

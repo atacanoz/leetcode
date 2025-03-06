@@ -30,4 +30,4 @@ while i < j:
     
 print(max_area)
 
-       
+           

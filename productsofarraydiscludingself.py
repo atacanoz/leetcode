@@ -8,7 +8,7 @@ for i in range(len(nums)):
     res.append(right)
     right *= nums[i]
     print(res)
-     
+         
 for k in range(len(nums)):                       
     left *= nums[len(nums)-k-1]
     print(res)       

@@ -10,4 +10,4 @@ class TreeNode:
     def InvertBinaryTree(self, root):      
         while self.left is not None:
             
-         
+             

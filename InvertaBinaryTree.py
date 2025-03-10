@@ -7,7 +7,7 @@ class TreeNode:
         self.left = left 
         self.right = right 
     
-    def InvertBinaryTree(self, root):   
+    def InvertBinaryTree(self, root):      
         while self.left is not None:
             
          

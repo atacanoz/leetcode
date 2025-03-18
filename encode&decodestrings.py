@@ -10,7 +10,7 @@ class Solution:
     def decode(self, s: str) -> List[str]:
         if s == "?{$#|1":  # This is the encoded version of [""] with our delimiter
             return [""]
-        return s.split("?{$#|1") if s else []
+        return s.split("?{$#|1") if s else []     
 
 
 

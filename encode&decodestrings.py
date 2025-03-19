@@ -12,7 +12,7 @@ class Solution:
             return [""]
         return s.split("?{$#|1") if s else []     
 
-
+     
 
 
 
